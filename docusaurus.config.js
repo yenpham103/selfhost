@@ -4,8 +4,8 @@ export default {
   title: 'Easto Subscriptions',
   tagline: 'Documentation for Easto Subscriptions',
   favicon: 'img/favicon.ico',
-  url: 'https://yenpham103.github.io/selfhost',
-  baseUrl: '/selfhost/',
+  url: 'https://yenpham103.github.io',    // Chỉ domain chính
+  baseUrl: '/selfhost/',                   // Đường dẫn con
   trailingSlash: false,
   organizationName: 'yenpham103',
   projectName: 'selfhost',
@@ -32,6 +32,10 @@ export default {
     ],
   ],
   themeConfig: {
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
     navbar: {
       title: 'Easto Subscriptions',
       logo: {
@@ -55,52 +59,7 @@ export default {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Hướng dẫn',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/yenpham103/selfhost',
-            },
-          ],
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} Easto Subscriptions, Inc. Built with Docusaurus.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
   },
 };
