@@ -4,11 +4,11 @@ export default {
   title: 'Easto Subscriptions',
   tagline: 'Documentation for Easto Subscriptions',
   favicon: 'img/favicon.ico',
-  url: 'https://docs.easto.vn',
-  baseUrl: '/',
+  url: 'https://yenpham103.github.io/selfhost',
+  baseUrl: '/selfhost/',
   trailingSlash: false,
   organizationName: 'yenpham103',
-  projectName: 'easto-subscriptions',
+  projectName: 'selfhost',
   i18n: {
     defaultLocale: 'vi',
     locales: ['vi'],
@@ -19,11 +19,11 @@ export default {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/yenpham103/easto-subscriptions/edit/main/',
+          editUrl: 'https://github.com/yenpham103/selfhost/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/yenpham103/easto-subscriptions/edit/main/',
+          editUrl: 'https://github.com/yenpham103/selfhost/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -47,7 +47,7 @@ export default {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/yenpham103/easto-subscriptions',
+          href: 'https://github.com/yenpham103/selfhost',
           label: 'GitHub',
           position: 'right',
         },
@@ -91,7 +91,7 @@ export default {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/yenpham103/easto-subscriptions',
+              href: 'https://github.com/yenpham103/selfhost',
             },
           ],
         },
@@ -101,7 +101,6 @@ export default {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['bash', 'json'],
     },
   },
 };
