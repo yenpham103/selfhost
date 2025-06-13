@@ -4,15 +4,17 @@ export default {
   title: 'Easto Subscriptions',
   tagline: 'Documentation for Easto Subscriptions',
   favicon: 'img/favicon.ico',
-  url: 'https://yenpham103.github.io',    // Chỉ domain chính
-  baseUrl: '/selfhost/',                   // Đường dẫn con
+  url: 'https://yenpham103.github.io',
+  baseUrl: '/selfhost/',
   trailingSlash: false,
   organizationName: 'yenpham103',
   projectName: 'selfhost',
+  
   i18n: {
     defaultLocale: 'vi',
     locales: ['vi'],
   },
+  
   presets: [
     [
       'classic',
@@ -31,6 +33,20 @@ export default {
       },
     ],
   ],
+  
+  // Thêm themes cho local search
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["vi", "en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+  
   themeConfig: {
     prism: {
       theme: prismThemes.github,
@@ -55,6 +71,7 @@ export default {
           label: 'GitHub',
           position: 'right',
         },
+        // Search sẽ tự động xuất hiện ở đây
       ],
     },
     footer: {
