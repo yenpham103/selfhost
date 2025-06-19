@@ -5,7 +5,7 @@ export default {
   tagline: 'Documentation for Site',
   favicon: 'img/favicon.ico',
   url: 'https://yenpham103.github.io',
-  baseUrl: '/',
+  baseUrl: '/selfhost',
   trailingSlash: false,
   organizationName: 'yenpham103',
   projectName: 'Side',
