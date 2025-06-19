@@ -20,7 +20,7 @@ export default {
       'classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars/main-sidebars.js'),
           editUrl: 'https://github.com/yenpham103/selfhost/edit/main/',
         },
         blog: {
