@@ -96,7 +96,7 @@ export default {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © 2012 SITE, SITE. Built with Docusaurus.`,
+      copyright: `Copyright © 2025 BSS Commerce.`,
     },
   },
 };
