@@ -91,12 +91,6 @@ export default {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/blog', label: 'Blog', position: 'right' },
-        {
-          to: 'https://github.com/yenpham103/selfhost',
-          label: 'Contact & Support',
-          position: 'right',
-        },
         // Search sẽ tự động xuất hiện ở đây
       ],
     },

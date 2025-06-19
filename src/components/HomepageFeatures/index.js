@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Subscription App',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -12,9 +13,10 @@ const FeatureList = [
         used to get your website up and running quickly.
       </>
     ),
+    to: '/docs'
   },
   {
-    title: 'Focus on What Matters',
+    title: 'B2B Solution',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -22,9 +24,10 @@ const FeatureList = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
+    to: '/api'
   },
   {
-    title: 'Powered by React',
+    title: 'B2B Lock',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
@@ -32,10 +35,11 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
+    to: 'guides'
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, to}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -43,6 +47,7 @@ function Feature({Svg, title, description}) {
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
+        <Link className="button button--secondary button--lg" to={to}>{to}</Link>
         <p>{description}</p>
       </div>
     </div>
