@@ -1,18 +1,18 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 
 export default {
-  title: 'Easto Subscriptions',
-  tagline: 'Documentation for Easto Subscriptions',
+  title: 'Site',
+  tagline: 'Documentation for Site',
   favicon: 'img/favicon.ico',
   url: 'https://yenpham103.github.io',
-  baseUrl: '/selfhost/',
+  baseUrl: '/',
   trailingSlash: false,
   organizationName: 'yenpham103',
-  projectName: 'selfhost',
+  projectName: 'Side',
   
   i18n: {
-    defaultLocale: 'vi',
-    locales: ['vi'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
   
   presets: [
@@ -33,8 +33,32 @@ export default {
       },
     ],
   ],
+
+  // Multi-instance docs configuration
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api-docs',
+        path: 'api-docs',
+        routeBasePath: 'api',
+        sidebarPath: require.resolve('./sidebars/api-sidebars.js'),
+        editUrl: 'https://github.com/yenpham103/selfhost/edit/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guides-docs',
+        path: 'guides',
+        routeBasePath: 'guides',
+        sidebarPath: require.resolve('./sidebars/guides-sidebars.js'),
+        editUrl: 'https://github.com/yenpham103/selfhost/edit/main/',
+      },
+    ],
+  ],
   
-  // Thêm themes cho local search
+  // Updated search configuration for multi-instance docs
   themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -43,6 +67,8 @@ export default {
         language: ["vi", "en"],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
+        docsRouteBasePath: ['docs', 'api', 'guides'],
+        docsDir: ['docs', 'api-docs', 'guides'],
       },
     ],
   ],
@@ -52,23 +78,23 @@ export default {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // Disable theme switching
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
-      title: 'Easto Subscriptions',
+      title: 'SITE',
       logo: {
-        alt: 'Easto Logo',
+        alt: 'SITE Logo',
         src: 'img/logo.svg',
       },
       items: [
+        { to: '/blog', label: 'Blog', position: 'right' },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Hướng dẫn',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://github.com/yenpham103/selfhost',
-          label: 'GitHub',
+          to: 'https://github.com/yenpham103/selfhost',
+          label: 'Contact & Support',
           position: 'right',
         },
         // Search sẽ tự động xuất hiện ở đây
@@ -76,7 +102,7 @@ export default {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Easto Subscriptions, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © 2012 SITE, SITE. Built with Docusaurus.`,
     },
   },
 };
